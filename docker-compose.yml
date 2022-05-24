@@ -1,0 +1,14 @@
+#docker run -d -p 8000:8000 -p 9443:9443 --name portainer --restart=always -v /var/run/docker.sock:/var/run/docker.sock -v portainer_data:/data portainer/portainer-ce:latest
+version: '2'
+services:
+  portainer:
+    image: portainer/portainer-ce:latest
+    ports:
+      - 9000:9000
+      - 9443:9443
+    labels:
+      - io.balena.features.balena-socket=1
+    volumes:
+      - data:/data
+volumes:
+  data:

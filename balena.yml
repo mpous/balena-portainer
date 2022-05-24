@@ -1,0 +1,19 @@
+name: Portainer
+type: sw.block
+description: >-
+  Deploy Portainer, the container management system now running on balena
+assets:
+  repository:
+    type: blob.asset
+    data:
+      url: 'https://github.com/mpous/balena-portainer'
+  logo:
+    type: blob.asset
+    data:
+      url: 'https://raw.githubusercontent.com/mpous/balena-portainer/main/logo.png'
+        
+data:
+  defaultDeviceType: raspberrypi4-64
+  supportedDeviceTypes:
+    - raspberrypi4-64
+version: 0.0.1
