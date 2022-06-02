@@ -1,6 +1,6 @@
 # balena Portainer block
 
-This is a block that can be used to run Portainer on a Raspberry Pi and get all the benefits of running Portainer and balena along.
+This is a block that can be used to run Portainer on a Raspberry Pi and get all the benefits of running Portainer and balena together.
 
 ## Add Portainer into your balena fleet
 
@@ -16,9 +16,10 @@ services:
     labels:
       - io.balena.features.balena-socket=1
     volumes:
-      - data:/data
+      - portainer_data:/data
+    command: -H unix:///var/run/balena-engine.sock
 volumes:
-  data:
+  portainer_data:
 ```
 
 ## Test Portainer on balena
@@ -27,16 +28,15 @@ If you would like to test a standalone version, click the button below
 
 [![balena deploy button](https://www.balena.io/deploy.svg)](https://dashboard.balena-cloud.com/deploy?repoUrl=https://github.com/mpous/balena-portainer)
 
-and deploy the code into a balenaCloud fleet. 
+and deploy the code into a balenaCloud fleet.
 
 Once you flashed a SD card with the balenaOS image from that fleet you will be able to see this:
 
 <img width="1904" alt="portainer-balenaCloud" src="https://user-images.githubusercontent.com/173156/170042835-5c6cc5aa-a803-4bed-8c01-6f66d3225bd6.png">
 
-Type on the browser `https://<local ip address>:9433` and you might be able to access to the Portainer UI.
+Type in your browser `http://<local ip address>:9000` and you will be able to access the Portainer UI.
 
-<img width="1904" alt="portainer-balena" src="https://user-images.githubusercontent.com/173156/170043014-e79625df-b683-4e9f-b090-76abfc657c5d.png">
-
+<img width="751" alt="2022-06-02 at 09 08 39" src="https://user-images.githubusercontent.com/64841595/171585754-c86a9afa-2d93-402c-85a3-4f482881f3d1.png">
 
 ## Contributing
 
