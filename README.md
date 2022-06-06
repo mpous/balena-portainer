@@ -37,6 +37,24 @@ Type on the browser `https://<local ip address>:9433` and you might be able to a
 
 <img width="1904" alt="portainer-balena" src="https://user-images.githubusercontent.com/173156/170043014-e79625df-b683-4e9f-b090-76abfc657c5d.png">
 
+Click `Add Environment` to start using Portainer on balena.
+
+![Add Environment on Portainer on balena](https://user-images.githubusercontent.com/173156/172139253-b2a062b4-ed02-4d90-a7e8-c6caca70cf45.png)
+
+Now select `Docker`and click `Connect via socket` plus `Override default socket path`. You are going to be able to use the `balena-engine` sock to connect with the Portainer Docker API. Add the public IP of your device as well.
+
+![Configure your Docker environment on Portainer on balena](https://user-images.githubusercontent.com/173156/172139561-5880491d-a840-4330-affb-cd37c730f5bd.png)
+
+As a result, you might have a new environment on your device.
+
+![Portainer environment list on balena](https://user-images.githubusercontent.com/173156/172139622-7f6140d0-647d-4ec5-a326-291ffa316aa6.png)
+
+From now you can start adding new containers on your Portainer running balena.
+
+![Containers running on Portainer on balena](https://user-images.githubusercontent.com/173156/172139719-0f674321-4d75-4e5f-8d1d-df39cc1eab3c.png)
+
+Have fun and let us know what you deployed with Portainer on balena please :)
+
 
 ## Contributing
 
